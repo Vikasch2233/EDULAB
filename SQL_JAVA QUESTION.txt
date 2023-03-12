@@ -1,0 +1,43 @@
+Question A)
+1.1.select * from Employee;
+2.select EMPNO,SALARY from Employee;
+3.select AVG(SALARY) from Employee;
+4.select count(*) from Employee;
+5.SELECT DISTINCT EMPNO
+FROM EMPLOYEE;
+6.SELECT EMP_NAME, SUM(salary), COUNT(*)
+FROM Employee
+GROUP BY EMP_NAME;
+8.select EMP_NAME from Employee order by desc;
+9.select * from employee where emp_name='AMIT' and salary>50000;
+
+
+B.Reverse String.
+public class ReverseString {
+   public static void main(String[] args) {
+      String str = "Hello, World!";
+      StringBuilder sb = new StringBuilder(str);
+      String reversedStr = sb.reverse().toString();
+      System.out.println("Original String: " + str);
+      System.out.println("Reversed String: " + reversedStr);
+   }
+}
+
+
+Question C,>>>Write the queries for implementing the following functions
+
+a) MAX
+b) MIN
+c) AVG
+d) COUNT
+e) SUM
+
+1.select MAX(SALARY) from EMPLOYEE;
+2.select MIN(SALARY) from EMPLOYEE;
+3.select AVG(SALARY)  from EMPLOYEE;
+4.select count(*) from EMPLOYEE;
+5.select SUM(SALARY) from EMPLOYEE;
+
+Question
+select employee from reviewer where no_of_record null;
+

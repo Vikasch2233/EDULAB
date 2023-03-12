@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Login and Registration</title>
+   </head>
+   <body>
+      <h2>Login</h2>
+      <form>
+         Username: <input type="text" id="username"><br>
+         Password: <input type="password" id="password"><br>
+         <input type="button" value="Login" onclick="login()">
+      </form>
+      <br>
+      <h2>Registration</h2>
+      <form>
+         Username: <input type="text" id="reg-username"><br>
+         Password: <input type="password" id="reg-password"><br>
+         <input type="button" value="Register" onclick="register()">
+      </form>
+      <script>
+         var users = []; // array to store registered users
+         
+         function login() {
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+            var found = false;
+            
+            for (var i = 0; i < users.length; i++) {
+               if (users[i].username === username && users[i].password === password) {
+                  found = true;
+                  break;
+               }
+            }
+            
+            if (found) {
+               alert("Login successful");
+            } else {
+               alert("Invalid username or password");
+            }
+         }
+         
+         function register() {
+            var username = document.getElementById("reg-username").value;
+            var password = document.getElementById("reg-password").value;
+            var exists = false;
+            
+            for (var i = 0; i < users.length; i++) {
+               if (users[i].username === username) {
+                  exists = true;
+                  break;
+               }
+            }
+            
+            if (exists) {
+               alert("Username already exists");
+            } else {
+               users.push({username: username, password: password});
+               alert("Registration successful");
+            }
+         }
+      </script>
+   </body>
+</html>
